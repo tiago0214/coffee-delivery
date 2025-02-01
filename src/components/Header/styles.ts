@@ -3,7 +3,11 @@ import styled from 'styled-components'
 export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
-  margin: 2rem 0;
+  width: 70rem;
+  align-items: center;
+
+  margin: 0 auto;
+  padding: 2rem 0;
 `
 
 export const CheckoutContainer = styled.div`
