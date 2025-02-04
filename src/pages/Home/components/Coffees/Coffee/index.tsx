@@ -1,5 +1,12 @@
-import { ShoppingCart } from '@phosphor-icons/react'
-import { CoffeeContainer, CoffeImg, Controls, InfoContent } from './styles'
+import { ShoppingCartSimple, Plus, Minus } from '@phosphor-icons/react'
+import {
+  CoffeeContainer,
+  CoffeImg,
+  Controls,
+  InfoContent,
+  UpDownContent,
+  ValueContent,
+} from './styles'
 
 import coffeImg from '../../../../../assets/coffees/americano.png'
 import { Tag } from './Tag'
@@ -16,19 +23,23 @@ export function Coffee() {
         <span>O tradicional café feito com água quente e grãos moídos</span>
       </InfoContent>
 
-      <Controls>
-        <span>RS 9,90</span>
+      <ValueContent>
+        <Controls>
+          <UpDownContent>
+            <button>
+              <Minus size={14} />
+            </button>
+            <span>1</span>
+            <button>
+              <Plus size={14} />
+            </button>
+          </UpDownContent>
 
-        <div>
-          <button>-</button>
-          <span>1</span>
-          <button>+</button>
-        </div>
-
-        <div>
-          <ShoppingCart />
-        </div>
-      </Controls>
+          <div>
+            <ShoppingCartSimple size={22} weight="fill" />
+          </div>
+        </Controls>
+      </ValueContent>
     </CoffeeContainer>
   )
 }

@@ -46,6 +46,47 @@ export const InfoContent = styled.div`
   }
 `
 
+export const ValueContent = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  gap: 1.5rem;
+`
 export const Controls = styled.div`
   display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+
+  > :last-child {
+    padding: 8px;
+    border-radius: 6px;
+    background-color: ${(props) => props.theme['purple-dark']};
+
+    & svg {
+      color: ${(props) => props.theme.white};
+      line-height: 0;
+    }
+  }
+`
+
+export const UpDownContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${(props) => props.theme['base-button']};
+  padding: 8px;
+  gap: 4px;
+  border-radius: 6px;
+
+  span {
+    line-height: 1.3;
+  }
+
+  button {
+    border: 0;
+    color: ${(props) => props.theme.purple};
+    background: transparent;
+  }
 `
