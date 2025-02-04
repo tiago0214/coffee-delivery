@@ -51,20 +51,39 @@ export const ValueContent = styled.div`
   align-items: center;
   margin-bottom: 1.25rem;
   gap: 1.5rem;
+
+  > div {
+    span:first-child {
+      font-size: 0.875rem;
+      color: ${(props) => props.theme['base-text']};
+    }
+  }
+
+  > div {
+    span:last-child {
+      font-family: 'Baloo 2';
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: ${(props) => props.theme['base-text']};
+    }
+  }
 `
 export const Controls = styled.div`
   display: flex;
   gap: 0.5rem;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   line-height: 0;
 
-  > :last-child {
+  & > :last-child {
     padding: 8px;
     border-radius: 6px;
     background-color: ${(props) => props.theme['purple-dark']};
+    border: 0;
+    line-height: 0;
+    cursor: pointer;
 
-    & svg {
+    svg {
       color: ${(props) => props.theme.white};
       line-height: 0;
     }
@@ -73,20 +92,22 @@ export const Controls = styled.div`
 
 export const UpDownContent = styled.div`
   display: flex;
+  width: 4.5rem;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background-color: ${(props) => props.theme['base-button']};
   padding: 8px;
-  gap: 4px;
   border-radius: 6px;
 
-  span {
+  & span {
     line-height: 1.3;
+    color: ${(props) => props.theme['base-title']};
   }
 
-  button {
+  & button {
     border: 0;
     color: ${(props) => props.theme.purple};
+    cursor: pointer;
     background: transparent;
   }
 `

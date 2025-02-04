@@ -24,20 +24,24 @@ export function Coffee() {
       </InfoContent>
 
       <ValueContent>
+        <div>
+          <span>R$</span> <span>9,90</span>
+        </div>
+
         <Controls>
           <UpDownContent>
             <button>
-              <Minus size={14} />
+              <Minus size={14} weight="bold" />
             </button>
             <span>1</span>
             <button>
-              <Plus size={14} />
+              <Plus size={14} weight="bold" />
             </button>
           </UpDownContent>
 
-          <div>
+          <button>
             <ShoppingCartSimple size={22} weight="fill" />
-          </div>
+          </button>
         </Controls>
       </ValueContent>
     </CoffeeContainer>

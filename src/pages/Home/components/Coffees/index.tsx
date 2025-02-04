@@ -6,7 +6,13 @@ export function Coffees() {
     <CoffeesContainer>
       <h1>Nossos cafés</h1>
 
-      <Coffee />
+      <div>
+        <Coffee />
+        <Coffee />
+        <Coffee />
+        <Coffee />
+        <Coffee />
+      </div>
     </CoffeesContainer>
   )
 }
