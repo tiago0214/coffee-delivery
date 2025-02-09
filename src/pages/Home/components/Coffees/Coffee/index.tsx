@@ -8,24 +8,39 @@ import {
   ValueContent,
 } from './styles'
 
-import coffeImg from '../../../../../assets/coffees/americano.png'
 import { Tag } from './Tag'
 
-export function Coffee() {
+interface CoffeProps {
+  id?: string
+  title: string
+  description: string
+  tags: string[]
+  price: number
+  img: string
+}
+
+// "id": "0",
+// "title": "Expresso Tradicional",
+// "description": "O tradicional café feito com água quente e grãos moídos",
+// "tags": ["tradicional"],
+// "price": 9.90,
+// "image": "./src/assets/coffees/expresso.png"
+
+export function Coffee({ description, img, price, tags, title }: CoffeProps) {
   return (
     <CoffeeContainer>
-      <CoffeImg src={coffeImg} alt="" />
+      <CoffeImg src={img} alt="" />
 
-      <Tag />
+      <Tag tags={tags} />
 
       <InfoContent>
-        <header>Expresso Tradicional</header>
-        <span>O tradicional café feito com água quente e grãos moídos</span>
+        <header>{title}</header>
+        <span>{description}</span>
       </InfoContent>
 
       <ValueContent>
         <div>
-          <span>R$</span> <span>9,90</span>
+          <span>R$</span> <span>{String(price).padEnd(4, '0')}</span>
         </div>
 
         <Controls>

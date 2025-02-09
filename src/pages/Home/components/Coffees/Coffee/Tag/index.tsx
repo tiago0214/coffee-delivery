@@ -1,9 +1,15 @@
 import { TagContainer } from './styles'
 
-export function Tag() {
+interface TagProps {
+  tags: string[]
+}
+
+export function Tag({ tags }: TagProps) {
   return (
     <TagContainer>
-      <span>Tradicional</span>
+      {tags.map((tagName) => (
+        <span>{tagName}</span>
+      ))}
     </TagContainer>
   )
 }
