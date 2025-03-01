@@ -52,6 +52,10 @@ export const AdressInputs = styled.div`
     border: solid 1px ${(props) => props.theme['base-button']};
   }
 
+  input:focus-within {
+    border: solid 1px ${(props) => props.theme['yellow-dark']};
+  }
+
   input::placeholder {
     color: ${(props) => props.theme['base-label']};
     font-size: 14px;
@@ -94,6 +98,65 @@ export const AddressHeader = styled.div`
     font-family: 'Roboto';
     line-height: 1.3;
     font-size: 14px;
+  }
+`
+
+export const PaymentHeader = styled.header`
+  display: flex;
+
+  gap: 0.5rem;
+
+  div {
+    display: flex;
+    flex-direction: column;
+
+    & > :first-child {
+      color: ${(props) => props.theme['base-subtitle']};
+      line-height: 1.3;
+    }
+
+    & > :last-child {
+      color: ${(props) => props.theme['base-text']};
+      font-size: 0.875rem;
+      line-height: 1.3;
+    }
+  }
+`
+
+export const PaymentOption = styled.div`
+  margin-top: 2rem;
+
+  display: flex;
+  gap: 0.75rem;
+`
+
+export const PaymentMethod = styled.div`
+  input {
+    display: none;
+  }
+
+  label {
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 6px;
+    background: ${(props) => props.theme['base-button']};
+    color: ${(props) => props.theme['base-text']};
+    font-family: 'Roboto';
+    font-size: 0.75rem;
+    line-height: 1.6;
+
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  label:hover {
+    background: ${(props) => props.theme['base-hover']};
+  }
+  input[type='radio']:checked + label {
+    border: 1px solid ${(props) => props.theme.purple};
+    background: ${(props) => props.theme['purple-light']};
   }
 `
 

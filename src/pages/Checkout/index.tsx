@@ -1,4 +1,10 @@
-import { MapPinLine } from '@phosphor-icons/react'
+import {
+  Bank,
+  CreditCard,
+  CurrencyDollar,
+  MapPinLine,
+  Money,
+} from '@phosphor-icons/react'
 import {
   AddressHeader,
   AdressContainer,
@@ -6,6 +12,9 @@ import {
   AdressInputs,
   CheckoutContainer,
   FormContainer,
+  PaymentHeader,
+  PaymentMethod,
+  PaymentOption,
   SelectedCoffesContainer,
 } from './styles'
 
@@ -50,13 +59,53 @@ export function Checkout() {
             </div>
 
             <div>
-              <header>Pagamento</header>
+              <PaymentHeader>
+                <CurrencyDollar size={22} color="#8047F8" />
 
-              <div>
-                <input type="radio" name="" id="" />
-                <input type="radio" name="" id="" />
-                <input type="radio" name="" id="" />
-              </div>
+                <div>
+                  <span>Pagamento</span>
+                  <span>
+                    O pagamento é feito na entrega. Escolha a forma que deseja
+                    pagar
+                  </span>
+                </div>
+              </PaymentHeader>
+
+              <PaymentOption>
+                <PaymentMethod>
+                  <input
+                    type="radio"
+                    name="payment"
+                    id="credit-card"
+                    value="credit-card"
+                  />
+                  <label htmlFor="credit-card">
+                    <CreditCard size={16} color="#8047F8" />
+                    <span>CARTÃO DE CRÉDITO</span>
+                  </label>
+                </PaymentMethod>
+
+                <PaymentMethod>
+                  <input
+                    type="radio"
+                    name="payment"
+                    id="debit-card"
+                    value="debit-card"
+                  />
+                  <label htmlFor="debit-card">
+                    <Bank size={16} color="#8047F8" />
+                    <span>CARTÃO DE DEBITO</span>
+                  </label>
+                </PaymentMethod>
+
+                <PaymentMethod>
+                  <input type="radio" name="payment" id="cash" value="cash" />
+                  <label htmlFor="cash">
+                    <Money size={16} color="#8047F8" />
+                    <span>DINHEIRO</span>
+                  </label>
+                </PaymentMethod>
+              </PaymentOption>
             </div>
           </AdressContent>
         </AdressContainer>
