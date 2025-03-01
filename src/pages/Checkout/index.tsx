@@ -29,22 +29,22 @@ export function Checkout() {
 
               <AdressInputs>
                 <div id="cep">
-                  <input type="text" />
+                  <input type="text" placeholder="CEP" />
                 </div>
 
                 <div id="rua">
-                  <input type="text" />
+                  <input type="text" placeholder="Rua" name="street" />
                 </div>
 
                 <div id="numero-complemento">
-                  <input type="text" />
-                  <input type="text" />
+                  <input type="text" placeholder="Número" name="number" />
+                  <input type="text" placeholder="Complemento" />
                 </div>
 
                 <div id="bairro-cidade-uf">
-                  <input type="text" />
-                  <input type="text" />
-                  <input type="text" />
+                  <input type="text" placeholder="Bairro" />
+                  <input type="text" placeholder="Cidade" />
+                  <input type="text" placeholder="UF" name="state" />
                 </div>
               </AdressInputs>
             </div>

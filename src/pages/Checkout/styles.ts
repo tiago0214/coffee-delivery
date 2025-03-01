@@ -40,12 +40,41 @@ export const AdressContent = styled.div`
 `
 
 export const AdressInputs = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
   input {
     padding: 0.75rem;
     background: ${(props) => props.theme['base-input']};
     border-radius: 4px;
 
     border: solid 1px ${(props) => props.theme['base-button']};
+  }
+
+  input::placeholder {
+    color: ${(props) => props.theme['base-label']};
+    font-size: 14px;
+  }
+
+  #cep > input {
+    width: 12.5rem;
+  }
+
+  #rua > input {
+    width: 100%;
+  }
+
+  #numero-complemento {
+    display: grid;
+    grid-template-columns: 12.5rem 1fr;
+    gap: 0.75rem;
+  }
+
+  #bairro-cidade-uf {
+    display: grid;
+    grid-template-columns: 12.5rem 1fr 3.75rem;
+    gap: 0.75rem;
   }
 `
 
