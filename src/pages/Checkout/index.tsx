@@ -11,12 +11,14 @@ import {
   AdressContent,
   AdressInputs,
   CheckoutContainer,
+  CoffeContainer,
   FormContainer,
   PaymentHeader,
   PaymentMethod,
   PaymentOption,
   SelectedCoffesContainer,
 } from './styles'
+import { SelectedCoffe } from './SelectedCoffe'
 
 export function Checkout() {
   return (
@@ -112,6 +114,10 @@ export function Checkout() {
 
         <SelectedCoffesContainer>
           <header>Cafés selecionados</header>
+          <CoffeContainer>
+            <SelectedCoffe />
+            <SelectedCoffe />
+          </CoffeContainer>
         </SelectedCoffesContainer>
       </FormContainer>
     </CheckoutContainer>

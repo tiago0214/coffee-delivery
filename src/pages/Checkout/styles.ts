@@ -160,4 +160,20 @@ export const PaymentMethod = styled.div`
   }
 `
 
-export const SelectedCoffesContainer = styled.div``
+export const SelectedCoffesContainer = styled.div`
+  & > header {
+    font-size: 1.125rem;
+    font-weight: 700;
+    font-family: 'Baloo 2';
+    line-height: 1.3;
+  }
+`
+export const CoffeContainer = styled.div`
+  margin-top: 0.95rem;
+  width: 28rem;
+  padding: 2.5rem;
+
+  border-radius: 6px 32px 6px 32px;
+
+  background-color: ${(props) => props.theme['base-card']};
+`
