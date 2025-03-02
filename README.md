@@ -1,4 +1,4 @@
-# Coffee Devilry
+# Coffee Delivery
 
 Coffee Delivery is a web commerce for a coffe shop
 
