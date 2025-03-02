@@ -60,11 +60,17 @@ export const ValueCotent = styled.div`
     justify-content: center;
     cursor: pointer;
 
+    transition: background-color 0.2s;
+
     span {
       color: ${(props) => props.theme['base-text']};
       font-family: 'Roboto';
       font-size: 0.75rem;
     }
+  }
+
+  & > button:hover {
+    background-color: ${(props) => props.theme['base-hover']};
   }
 `
 

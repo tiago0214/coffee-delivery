@@ -171,9 +171,9 @@ export const SelectedCoffesContainer = styled.div`
 export const CoffeContainer = styled.div`
   margin-top: 0.95rem;
   width: 28rem;
-  padding: 2.5rem;
+  padding: 3rem;
 
-  border-radius: 6px 32px 6px 32px;
+  border-radius: 6px 44px 6px 44px;
 
   background-color: ${(props) => props.theme['base-card']};
 `

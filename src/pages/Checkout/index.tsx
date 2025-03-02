@@ -19,6 +19,7 @@ import {
   SelectedCoffesContainer,
 } from './styles'
 import { SelectedCoffe } from './SelectedCoffe'
+import { TotalValue } from './TotalValue'
 
 export function Checkout() {
   return (
@@ -117,6 +118,8 @@ export function Checkout() {
           <CoffeContainer>
             <SelectedCoffe />
             <SelectedCoffe />
+
+            <TotalValue />
           </CoffeContainer>
         </SelectedCoffesContainer>
       </FormContainer>
