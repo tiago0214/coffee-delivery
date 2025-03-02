@@ -8,6 +8,10 @@ export const HeaderContainer = styled.header`
 
   margin: 0 auto;
   padding: 2rem 0;
+
+  & > a {
+    line-height: 0;
+  }
 `
 
 export const CheckoutContainer = styled.div`
@@ -42,6 +46,10 @@ export const CheckoutCart = styled.div`
   background-color: ${(props) => props.theme['yellow-light']};
   border-radius: 6px;
   padding: 0.5rem;
+
+  & > a {
+    line-height: 0;
+  }
 
   svg {
     color: ${(props) => props.theme['yellow-dark']};

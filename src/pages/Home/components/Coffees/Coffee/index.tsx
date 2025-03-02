@@ -19,13 +19,6 @@ interface CoffeProps {
   img: string
 }
 
-// "id": "0",
-// "title": "Expresso Tradicional",
-// "description": "O tradicional café feito com água quente e grãos moídos",
-// "tags": ["tradicional"],
-// "price": 9.90,
-// "image": "./src/assets/coffees/expresso.png"
-
 export function Coffee({ description, img, price, tags, title }: CoffeProps) {
   return (
     <CoffeeContainer>

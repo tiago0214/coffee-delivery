@@ -22,7 +22,6 @@ export const AdressContainer = styled.div`
   }
 
   width: 40rem;
-  /* flex: 1; */
   display: flex;
   flex-direction: column;
 `

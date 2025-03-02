@@ -6,11 +6,14 @@ import {
   HeaderContainer,
   Info,
 } from './styles'
+import { NavLink } from 'react-router'
 
 export function Header() {
   return (
     <HeaderContainer>
-      <img src={logo} alt="" />
+      <NavLink to="/">
+        <img src={logo} alt="" />
+      </NavLink>
 
       <CheckoutContainer>
         <Info>
@@ -19,7 +22,9 @@ export function Header() {
         </Info>
 
         <CheckoutCart>
-          <ShoppingCart size={22} weight="fill" />
+          <NavLink to={'/checkout'}>
+            <ShoppingCart size={22} weight="fill" />
+          </NavLink>
         </CheckoutCart>
       </CheckoutContainer>
     </HeaderContainer>
